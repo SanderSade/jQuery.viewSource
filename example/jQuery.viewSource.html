@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>jQuery.viewSource demo</title>
+	<link href="prettify.css" rel="stylesheet" type="text/css" />
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+	<script src="prettify.js" type="text/javascript"></script>
+	<script src="jQuery.viewSource.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#viewsource1").viewSource();
+			$("#viewsource2").viewSource("#clickSection");
+			$("#viewsource3").viewSource("head");
+		});
+	</script>
+	<style type="text/css">
+		body
+		{
+			text-align: center;
+			font-family: Georgia, Tahoma, Arial, sans-serif;
+			font-size: 10pt;
+			background-image: repeating-linear-gradient(45deg, white, whitesmoke 4px, white 2px, white 24px);
+		}
+		
+		#clickSection p
+		{
+			text-shadow: Gray 1px 0px 0px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h3>
+			Welcome to the jQuery.viewSource demo!</h3>
+		<code>See <a href="http://dukelupus.com">dukelupus.com</a> for additional information</code>
+	</header>
+	<section id="clickSection">
+		<p id="viewsource1">
+			Click me to see complete page source</p>
+		<p id="viewsource2">
+			Click to see just #clickSection source</p>
+		<p id="viewsource3">
+			Click to see just&nbsp; &lt;head&gt;...&lt;/head&gt; source</p>
+	</section>
+</body>
+</html>
